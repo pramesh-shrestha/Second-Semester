@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ex7_BarChart.view.barChart.BarChartViewController">
+   <children>
+      <BarChart fx:id="barChart" layoutY="80.0" prefWidth="500.0">
+        <xAxis>
+          <CategoryAxis label="xAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="yAxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label fx:id="timeStampLabel" layoutX="23.0" layoutY="14.0" text="Last updated:" />
+      <Button layoutX="23.0" layoutY="42.0" mnemonicParsing="false" onAction="#onUpdateButton" text="Update" />
+   </children>
+</AnchorPane>

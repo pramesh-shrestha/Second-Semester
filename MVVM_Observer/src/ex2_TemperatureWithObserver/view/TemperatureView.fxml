@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="220.0" prefWidth="471.0" spacing="10.0" style="-fx-background-color: #83f28f;" userData="Temperature presenter" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ex2_TemperatureWithObserver.view.TemperatureViewController">
+   <children>
+      <HBox>
+         <children>
+            <Label alignment="CENTER" blendMode="DARKEN" prefHeight="35.0" prefWidth="597.0" style="-fx-background-color: #75ba75;" text="Temperature presenter" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+      <VBox prefHeight="118.0" prefWidth="471.0">
+         <children>
+            <Label fx:id="outputLabel1" alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="452.0" style="-fx-background-color: #cefad0;" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="outputLabel2" alignment="CENTER" prefHeight="49.0" prefWidth="452.0" style="-fx-background-color: #cefad0;" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</VBox>
