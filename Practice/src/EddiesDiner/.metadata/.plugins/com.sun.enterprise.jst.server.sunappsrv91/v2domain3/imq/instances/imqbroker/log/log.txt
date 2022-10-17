@@ -1,0 +1,14 @@
+# 1257139120109 Do not modify this line
+[02/nov/2009:06:18:40 CET] [B1002]: An existing property file for imqbroker was not found, no stored properties will be loaded
+[02/nov/2009:06:18:40 CET] 
+================================================================================
+Sun Java(tm) System Message Queue 4.3
+Sun Microsystems, Inc.
+Version:  4.3  (Build 7-g)
+Compile:  Fri 11/07/2008 
+
+Copyright (c) 2007 Sun Microsystems, Inc.  All rights reserved.  Use is
+subject to license terms.
+================================================================================
+Java Runtime: 1.6.0_12 Sun Microsystems Inc. C:\GlassFish-Tools-Bundle-For-Eclipse-1.1\jre\jre
+[02/nov/2009:06:18:40 CET] [B1161]: Initialization of instance has completed, exiting

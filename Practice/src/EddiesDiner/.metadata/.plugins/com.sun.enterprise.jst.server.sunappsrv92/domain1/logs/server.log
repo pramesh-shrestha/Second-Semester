@@ -1,0 +1,276 @@
+18-11-2010 15:18:15 com.sun.enterprise.admin.launcher.GFLauncherLogger info
+INFO: JVM invocation command line:
+C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\bin\java.exe
+-cp
+C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/modules/glassfish.jar
+-XX:+UnlockDiagnosticVMOptions
+-XX:MaxPermSize=192m
+-XX:NewRatio=2
+-XX:+LogVMOutput
+-XX:LogFile=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/logs/jvm.log
+-Xmx512m
+-client
+-javaagent:C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib/monitor/btrace-agent.jar=unsafe=true,noServer=true
+-Dosgi.shell.telnet.maxconn=1
+-Djdbc.drivers=org.apache.derby.jdbc.ClientDriver
+-Dfelix.fileinstall.dir=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/autostart/
+-Djavax.net.ssl.keyStore=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/keystore.jks
+-Dosgi.shell.telnet.port=6666
+-Djava.security.policy=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/server.policy
+-Dfelix.fileinstall.poll=5000
+-Dcom.sun.aas.instanceRoot=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1
+-Dcom.sun.enterprise.config.config_environment_factory_class=com.sun.enterprise.config.serverbeans.AppserverConfigEnvironmentFactory
+-Dosgi.shell.telnet.ip=127.0.0.1
+-Djava.endorsed.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/endorsed;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/lib/endorsed
+-Dcom.sun.aas.installRoot=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish
+-Djava.ext.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/lib/ext
+-Dfelix.fileinstall.bundles.new.start=true
+-Djavax.net.ssl.trustStore=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/cacerts.jks
+-Dcom.sun.enterprise.security.httpsOutboundKeyAlias=s1as
+-Djava.security.auth.login.config=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/login.conf
+-DANTLR_USE_DIRECT_CLASS_LOADING=true
+-Dfelix.fileinstall.debug=1
+-Dorg.glassfish.web.rfc2109_cookie_names_enforced=false
+-Djava.library.path=C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/bin;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish;C:/Windows/Sun/Java/bin;C:/Windows/System32;C:/Windows;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin/client;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin;C:/Windows/System32/wbem;C:/Windows/System32/WindowsPowerShell/v1.0;C:/Program Files/WIDCOMM/Bluetooth Software;C:/Program Files/WIDCOMM/Bluetooth Software/syswow64;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/bin/bin
+com.sun.enterprise.glassfish.bootstrap.ASMain
+-domainname
+domain1
+-asadmin-args
+start-domain,,,--domaindir,,,C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/domains,,,--debug=false,,,--verbose=false,,,domain1
+-instancename
+server
+-verbose
+false
+-debug
+false
+-asadmin-classpath
+C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/modules/admin-cli.jar
+-asadmin-classname
+com.sun.enterprise.admin.cli.AsadminMain
+-upgrade
+false
+-domaindir
+C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/domains/domain1
+-read-stdin
+true
+18-11-2010 15:18:16 com.sun.enterprise.admin.launcher.GFLauncherLogger info
+INFO: Successfully launched in 10 msec.
+[#|2010-11-18T15:18:41.224+0100|INFO|null|null|_ThreadID=11;_ThreadName=Thread-1;|Running GlassFish Version: GlassFish v3 (build 74.2)|#]
+
+[#|2010-11-18T15:18:41.536+0100|INFO|glassfishv3.0|com.sun.grizzly.config.GrizzlyServiceListener|_ThreadID=11;_ThreadName=Thread-1;|Perform lazy SSL initialization for the listener 'http-listener-2'|#]
+
+[#|2010-11-18T15:18:41.578+0100|INFO|glassfishv3.0|com.sun.grizzly.config.GrizzlyServiceListener|_ThreadID=12;_ThreadName=Thread-1;|Starting Grizzly Framework 1.9.18-k - Thu Nov 18 15:18:41 CET 2010|#]
+
+[#|2010-11-18T15:18:41.659+0100|INFO|glassfishv3.0|com.sun.grizzly.config.GrizzlyServiceListener|_ThreadID=13;_ThreadName=Thread-1;|Starting Grizzly Framework 1.9.18-k - Thu Nov 18 15:18:41 CET 2010|#]
+
+[#|2010-11-18T15:18:41.682+0100|SEVERE|glassfishv3.0|grizzly|_ThreadID=14;_ThreadName=Thread-1;|doSelect IOException
+java.net.BindException: Address already in use: bind: 8181=com.sun.enterprise.v3.services.impl.monitor.MonitorableSSLSelectorHandler@1e5ab72
+	at com.sun.grizzly.TCPSelectorHandler.initSelector(TCPSelectorHandler.java:446)
+	at com.sun.grizzly.TCPSelectorHandler.preSelect(TCPSelectorHandler.java:393)
+	at com.sun.grizzly.SelectorHandlerRunner.doSelect(SelectorHandlerRunner.java:183)
+	at com.sun.grizzly.SelectorHandlerRunner.run(SelectorHandlerRunner.java:130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+|#]
+
+[#|2010-11-18T15:18:41.687+0100|INFO|glassfishv3.0|null|_ThreadID=15;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 138ms listening on port 4848|#]
+
+[#|2010-11-18T15:18:41.687+0100|INFO|glassfishv3.0|null|_ThreadID=18;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 114ms listening on port 7676|#]
+
+[#|2010-11-18T15:18:41.687+0100|INFO|glassfishv3.0|null|_ThreadID=17;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 166ms listening on port 8080|#]
+
+[#|2010-11-18T15:18:41.687+0100|INFO|glassfishv3.0|null|_ThreadID=16;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 127ms listening on port 3700|#]
+
+[#|2010-11-18T15:18:41.745+0100|INFO|glassfishv3.0|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=11;_ThreadName=Thread-1;|GlassFish v3 (74.2) startup time : Felix(25061ms) startup services(545ms) total(25606ms)|#]
+
+[#|2010-11-18T15:18:41.747+0100|SEVERE|glassfishv3.0|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=11;_ThreadName=Thread-1;|Shutting down v3 due to startup exception : Address already in use: bind: 8181=com.sun.enterprise.v3.services.impl.monitor.MonitorableSSLSelectorHandler@1e5ab72|#]
+
+[#|2010-11-18T15:18:41.757+0100|INFO|glassfishv3.0|javax.enterprise.system.tools.admin.com.sun.enterprise.v3.admin|_ThreadID=19;_ThreadName=Thread-1;|Server shutdown initiated|#]
+
+[#|2010-11-18T15:18:41.758+0100|INFO|glassfishv3.0|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=20;_ThreadName=Thread-1;|[Thread[GlassFish Kernel Main Thread,5,main]] started|#]
+
+18-11-2010 15:23:09 com.sun.enterprise.admin.launcher.GFLauncherLogger info
+INFO: JVM invocation command line:
+C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\bin\java.exe
+-cp
+C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/modules/glassfish.jar
+-XX:+UnlockDiagnosticVMOptions
+-XX:MaxPermSize=192m
+-XX:NewRatio=2
+-XX:+LogVMOutput
+-XX:LogFile=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/logs/jvm.log
+-Xmx512m
+-client
+-javaagent:C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib/monitor/btrace-agent.jar=unsafe=true,noServer=true
+-Dosgi.shell.telnet.maxconn=1
+-Djdbc.drivers=org.apache.derby.jdbc.ClientDriver
+-Dfelix.fileinstall.dir=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/autostart/
+-Djavax.net.ssl.keyStore=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/keystore.jks
+-Dosgi.shell.telnet.port=6666
+-Djava.security.policy=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/server.policy
+-Dfelix.fileinstall.poll=5000
+-Dcom.sun.aas.instanceRoot=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1
+-Dcom.sun.enterprise.config.config_environment_factory_class=com.sun.enterprise.config.serverbeans.AppserverConfigEnvironmentFactory
+-Dosgi.shell.telnet.ip=127.0.0.1
+-Djava.endorsed.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/endorsed;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/lib/endorsed
+-Dcom.sun.aas.installRoot=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish
+-Djava.ext.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/lib/ext
+-Dfelix.fileinstall.bundles.new.start=true
+-Djavax.net.ssl.trustStore=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/cacerts.jks
+-Dcom.sun.enterprise.security.httpsOutboundKeyAlias=s1as
+-Djava.security.auth.login.config=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/login.conf
+-DANTLR_USE_DIRECT_CLASS_LOADING=true
+-Dfelix.fileinstall.debug=1
+-Dorg.glassfish.web.rfc2109_cookie_names_enforced=false
+-Djava.library.path=C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/bin;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish;C:/Windows/Sun/Java/bin;C:/Windows/System32;C:/Windows;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin/client;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin;C:/Windows/System32/wbem;C:/Windows/System32/WindowsPowerShell/v1.0;C:/Program Files/WIDCOMM/Bluetooth Software;C:/Program Files/WIDCOMM/Bluetooth Software/syswow64;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/bin/bin
+com.sun.enterprise.glassfish.bootstrap.ASMain
+-domainname
+domain1
+-asadmin-args
+start-domain,,,--domaindir,,,C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/domains,,,--debug=false,,,--verbose=false,,,domain1
+-instancename
+server
+-verbose
+false
+-debug
+false
+-asadmin-classpath
+C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/modules/admin-cli.jar
+-asadmin-classname
+com.sun.enterprise.admin.cli.AsadminMain
+-upgrade
+false
+-domaindir
+C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/domains/domain1
+-read-stdin
+true
+18-11-2010 15:23:09 com.sun.enterprise.admin.launcher.GFLauncherLogger info
+INFO: Successfully launched in 10 msec.
+[#|2010-11-18T15:23:11.021+0100|INFO|null|null|_ThreadID=11;_ThreadName=Thread-1;|Running GlassFish Version: GlassFish v3 (build 74.2)|#]
+
+[#|2010-11-18T15:23:11.316+0100|INFO|glassfishv3.0|com.sun.grizzly.config.GrizzlyServiceListener|_ThreadID=11;_ThreadName=Thread-1;|Perform lazy SSL initialization for the listener 'http-listener-2'|#]
+
+[#|2010-11-18T15:23:11.362+0100|INFO|glassfishv3.0|com.sun.grizzly.config.GrizzlyServiceListener|_ThreadID=12;_ThreadName=Thread-1;|Starting Grizzly Framework 1.9.18-k - Thu Nov 18 15:23:11 CET 2010|#]
+
+[#|2010-11-18T15:23:11.362+0100|INFO|glassfishv3.0|com.sun.grizzly.config.GrizzlyServiceListener|_ThreadID=13;_ThreadName=Thread-1;|Starting Grizzly Framework 1.9.18-k - Thu Nov 18 15:23:11 CET 2010|#]
+
+[#|2010-11-18T15:23:11.462+0100|SEVERE|glassfishv3.0|grizzly|_ThreadID=14;_ThreadName=Thread-1;|doSelect IOException
+java.net.BindException: Address already in use: bind: 8181=com.sun.enterprise.v3.services.impl.monitor.MonitorableSSLSelectorHandler@d1b72d
+	at com.sun.grizzly.TCPSelectorHandler.initSelector(TCPSelectorHandler.java:446)
+	at com.sun.grizzly.TCPSelectorHandler.preSelect(TCPSelectorHandler.java:393)
+	at com.sun.grizzly.SelectorHandlerRunner.doSelect(SelectorHandlerRunner.java:183)
+	at com.sun.grizzly.SelectorHandlerRunner.run(SelectorHandlerRunner.java:130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+|#]
+
+[#|2010-11-18T15:23:11.464+0100|INFO|glassfishv3.0|null|_ThreadID=16;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 167ms listening on port 8080|#]
+
+[#|2010-11-18T15:23:11.464+0100|INFO|glassfishv3.0|null|_ThreadID=15;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 113ms listening on port 7676|#]
+
+[#|2010-11-18T15:23:11.465+0100|INFO|glassfishv3.0|null|_ThreadID=17;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 124ms listening on port 3700|#]
+
+[#|2010-11-18T15:23:11.465+0100|INFO|glassfishv3.0|null|_ThreadID=18;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 139ms listening on port 4848|#]
+
+[#|2010-11-18T15:23:11.513+0100|INFO|glassfishv3.0|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=11;_ThreadName=Thread-1;|GlassFish v3 (74.2) startup time : Felix(1308ms) startup services(527ms) total(1835ms)|#]
+
+[#|2010-11-18T15:23:11.515+0100|SEVERE|glassfishv3.0|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=11;_ThreadName=Thread-1;|Shutting down v3 due to startup exception : Address already in use: bind: 8181=com.sun.enterprise.v3.services.impl.monitor.MonitorableSSLSelectorHandler@d1b72d|#]
+
+[#|2010-11-18T15:23:11.525+0100|INFO|glassfishv3.0|javax.enterprise.system.tools.admin.com.sun.enterprise.v3.admin|_ThreadID=19;_ThreadName=Thread-1;|Server shutdown initiated|#]
+
+[#|2010-11-18T15:23:11.526+0100|INFO|glassfishv3.0|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=20;_ThreadName=Thread-1;|[Thread[GlassFish Kernel Main Thread,5,main]] started|#]
+
+18-11-2010 15:39:55 com.sun.enterprise.admin.launcher.GFLauncherLogger info
+INFO: JVM invocation command line:
+C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre\bin\java.exe
+-cp
+C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/modules/glassfish.jar
+-XX:+UnlockDiagnosticVMOptions
+-XX:MaxPermSize=192m
+-XX:NewRatio=2
+-XX:+LogVMOutput
+-XX:LogFile=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/logs/jvm.log
+-Xmx512m
+-client
+-javaagent:C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib/monitor/btrace-agent.jar=unsafe=true,noServer=true
+-Dosgi.shell.telnet.maxconn=1
+-Djdbc.drivers=org.apache.derby.jdbc.ClientDriver
+-Dfelix.fileinstall.dir=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/autostart/
+-Djavax.net.ssl.keyStore=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/keystore.jks
+-Dosgi.shell.telnet.port=6666
+-Djava.security.policy=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/server.policy
+-Dfelix.fileinstall.poll=5000
+-Dcom.sun.aas.instanceRoot=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1
+-Dcom.sun.enterprise.config.config_environment_factory_class=com.sun.enterprise.config.serverbeans.AppserverConfigEnvironmentFactory
+-Dosgi.shell.telnet.ip=127.0.0.1
+-Djava.endorsed.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/endorsed;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/lib/endorsed
+-Dcom.sun.aas.installRoot=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish
+-Djava.ext.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/lib/ext
+-Dfelix.fileinstall.bundles.new.start=true
+-Djavax.net.ssl.trustStore=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/cacerts.jks
+-Dcom.sun.enterprise.security.httpsOutboundKeyAlias=s1as
+-Djava.security.auth.login.config=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/login.conf
+-DANTLR_USE_DIRECT_CLASS_LOADING=true
+-Dfelix.fileinstall.debug=1
+-Dorg.glassfish.web.rfc2109_cookie_names_enforced=false
+-Djava.library.path=C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/bin;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish;C:/Windows/Sun/Java/bin;C:/Windows/System32;C:/Windows;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin/client;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin;C:/Windows/System32/wbem;C:/Windows/System32/WindowsPowerShell/v1.0;C:/Program Files/WIDCOMM/Bluetooth Software;C:/Program Files/WIDCOMM/Bluetooth Software/syswow64;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/bin/bin
+com.sun.enterprise.glassfish.bootstrap.ASMain
+-domainname
+domain1
+-asadmin-args
+start-domain,,,--domaindir,,,C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/domains,,,--debug=false,,,--verbose=false,,,domain1
+-instancename
+server
+-verbose
+false
+-debug
+false
+-asadmin-classpath
+C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/modules/admin-cli.jar
+-asadmin-classname
+com.sun.enterprise.admin.cli.AsadminMain
+-upgrade
+false
+-domaindir
+C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/domains/domain1
+-read-stdin
+true
+18-11-2010 15:39:55 com.sun.enterprise.admin.launcher.GFLauncherLogger info
+INFO: Successfully launched in 16 msec.
+[#|2010-11-18T15:40:10.001+0100|INFO|null|null|_ThreadID=11;_ThreadName=Thread-1;|Running GlassFish Version: GlassFish v3 (build 74.2)|#]
+
+[#|2010-11-18T15:40:11.080+0100|INFO|glassfishv3.0|com.sun.grizzly.config.GrizzlyServiceListener|_ThreadID=11;_ThreadName=Thread-1;|Perform lazy SSL initialization for the listener 'http-listener-2'|#]
+
+[#|2010-11-18T15:40:11.220+0100|INFO|glassfishv3.0|com.sun.grizzly.config.GrizzlyServiceListener|_ThreadID=13;_ThreadName=Thread-1;|Starting Grizzly Framework 1.9.18-k - Thu Nov 18 15:40:11 CET 2010|#]
+
+[#|2010-11-18T15:40:11.220+0100|INFO|glassfishv3.0|com.sun.grizzly.config.GrizzlyServiceListener|_ThreadID=12;_ThreadName=Thread-1;|Starting Grizzly Framework 1.9.18-k - Thu Nov 18 15:40:11 CET 2010|#]
+
+[#|2010-11-18T15:40:11.298+0100|SEVERE|glassfishv3.0|grizzly|_ThreadID=14;_ThreadName=Thread-1;|doSelect IOException
+java.net.BindException: Address already in use: bind: 8181=com.sun.enterprise.v3.services.impl.monitor.MonitorableSSLSelectorHandler@16a4a67
+	at com.sun.grizzly.TCPSelectorHandler.initSelector(TCPSelectorHandler.java:446)
+	at com.sun.grizzly.TCPSelectorHandler.preSelect(TCPSelectorHandler.java:393)
+	at com.sun.grizzly.SelectorHandlerRunner.doSelect(SelectorHandlerRunner.java:183)
+	at com.sun.grizzly.SelectorHandlerRunner.run(SelectorHandlerRunner.java:130)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:619)
+|#]
+
+[#|2010-11-18T15:40:11.314+0100|INFO|glassfishv3.0|null|_ThreadID=15;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 219ms listening on port 4848|#]
+
+[#|2010-11-18T15:40:11.314+0100|INFO|glassfishv3.0|null|_ThreadID=18;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 203ms listening on port 3700|#]
+
+[#|2010-11-18T15:40:11.314+0100|INFO|glassfishv3.0|null|_ThreadID=17;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 188ms listening on port 7676|#]
+
+[#|2010-11-18T15:40:11.314+0100|INFO|glassfishv3.0|null|_ThreadID=16;_ThreadName=Thread-1;|Grizzly Framework 1.9.18-k started in: 266ms listening on port 8080|#]
+
+[#|2010-11-18T15:40:11.454+0100|INFO|glassfishv3.0|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=11;_ThreadName=Thread-1;|GlassFish v3 (74.2) startup time : Felix(14114ms) startup services(1641ms) total(15755ms)|#]
+
+[#|2010-11-18T15:40:11.454+0100|SEVERE|glassfishv3.0|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=11;_ThreadName=Thread-1;|Shutting down v3 due to startup exception : Address already in use: bind: 8181=com.sun.enterprise.v3.services.impl.monitor.MonitorableSSLSelectorHandler@16a4a67|#]
+
+[#|2010-11-18T15:40:11.486+0100|INFO|glassfishv3.0|javax.enterprise.system.tools.admin.com.sun.enterprise.v3.admin|_ThreadID=19;_ThreadName=Thread-1;|Server shutdown initiated|#]
+
+[#|2010-11-18T15:40:11.486+0100|INFO|glassfishv3.0|javax.enterprise.system.core.com.sun.enterprise.v3.server|_ThreadID=20;_ThreadName=Thread-1;|[Thread[GlassFish Kernel Main Thread,5,main]] started|#]
+

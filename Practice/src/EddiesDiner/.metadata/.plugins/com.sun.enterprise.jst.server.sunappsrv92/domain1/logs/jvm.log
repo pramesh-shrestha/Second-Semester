@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hotspot_log version='160 1' process='5912' time_ms='1290091195332'>
+<vm_version>
+<name>
+Java HotSpot(TM) Client VM
+</name>
+<release>
+14.2-b01
+</release>
+<info>
+Java HotSpot(TM) Client VM (14.2-b01) for windows-x86 JRE (1.6.0_16-b01), built on Jul 31 2009 11:26:58 by &quot;java_re&quot; with MS VC++ 7.1
+</info>
+</vm_version>
+<vm_arguments>
+<args>
+-XX:+UnlockDiagnosticVMOptions -XX:MaxPermSize=192m -XX:NewRatio=2 -XX:+LogVMOutput -XX:LogFile=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/logs/jvm.log -Xmx512m -javaagent:C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib/monitor/btrace-agent.jar=unsafe=true,noServer=true -Dosgi.shell.telnet.maxconn=1 -Djdbc.drivers=org.apache.derby.jdbc.ClientDriver -Dfelix.fileinstall.dir=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/autostart/ -Djavax.net.ssl.keyStore=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/keystore.jks -Dosgi.shell.telnet.port=6666 -Djava.security.policy=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/server.policy -Dfelix.fileinstall.poll=5000 -Dcom.sun.aas.instanceRoot=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1 -Dcom.sun.enterprise.config.config_environment_factory_class=com.sun.enterprise.config.serverbeans.AppserverConfigEnvironmentFactory -Dosgi.shell.telnet.ip=127.0.0.1 -Djava.endorsed.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/modules/endorsed;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish/lib/endorsed -Dcom.sun.aas.installRoot=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish -Djava.ext.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/lib/ext -Dfelix.fileinstall.bundles.new.start=true -Djavax.net.ssl.trustStore=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/cacerts.jks -Dcom.sun.enterprise.security.httpsOutboundKeyAlias=s1as -Djava.security.auth.login.config=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\glassfishv3\glassfish\domains\domain1/config/login.conf -DANTLR_USE_DIRECT_CLASS_LOADING=true -Dfelix.fileinstall.debug=1 -Dorg.glassfish.web.rfc2109_cookie_names_enforced=false -Djava.library.path=C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/lib;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/bin;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish;C:/Windows/Sun/Java/bin;C:/Windows/System32;C:/Windows;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin/client;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/jre/bin;C:/Windows/System32/wbem;C:/Windows/System32/WindowsPowerShell/v1.0;C:/Program Files/WIDCOMM/Bluetooth Software;C:/Program Files/WIDCOMM/Bluetooth Software/syswow64;C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/jre/bin/bin 
+</args>
+<command>
+com.sun.enterprise.glassfish.bootstrap.ASMain -domainname domain1 -asadmin-args start-domain,,,--domaindir,,,C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/domains,,,--debug=false,,,--verbose=false,,,domain1 -instancename server -verbose false -debug false -asadmin-classpath C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/modules/admin-cli.jar -asadmin-classname com.sun.enterprise.admin.cli.AsadminMain -upgrade false -domaindir C:/GlassFish-Tools-Bundle-For-Eclipse-1.2/glassfishv3/glassfish/domains/domain1 -read-stdin true
+</command>
+<launcher>
+SUN_STANDARD
+</launcher>
+<properties>
+java.vm.specification.version=1.0
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.specification.vendor=Sun Microsystems Inc.
+java.vm.version=14.2-b01
+java.vm.name=Java HotSpot(TM) Client VM
+java.vm.vendor=Sun Microsystems Inc.
+java.vm.info=mixed mode, sharing
+java.ext.dirs=C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/lib/ext;C:\GlassFish-Tools-Bundle-For-Eclipse-1.2\jre/jre/lib/ext;C:\Gla
