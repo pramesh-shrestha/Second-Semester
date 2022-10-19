@@ -16,7 +16,7 @@ public class LogViewController
   public void init(LogViewModel logViewModel, ViewHandler viewHandler)
   {
     this.viewHandler = viewHandler;
-    this.logViewModel = logViewModel;
+    logViewModel.loadLogs();
     logList.setItems(logViewModel.getLogs());
   }
 
