@@ -14,13 +14,15 @@ public class ViewHandler {
 
     public ViewHandler(ViewModelFactory viewModelFactory) {
         this.viewModelFactory = viewModelFactory;
+        System.out.println("i am here");
     }
 
     public void start(){
+
         openView();
     }
 
-    public void openView()  {
+    private void openView()  {
         Stage stage = new Stage();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource( "TimestampView.fxml"));
@@ -33,6 +35,7 @@ public class ViewHandler {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+
         }
         catch (IOException e)
         {

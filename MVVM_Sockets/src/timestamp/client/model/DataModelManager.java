@@ -2,7 +2,7 @@ package timestamp.client.model;
 
 
 import timestamp.client.network.Client;
-import timestamp.server.model.DataModel;
+import timestamp.client.model.DataModel;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -10,20 +10,21 @@ import java.beans.PropertyChangeSupport;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class DataModelManager implements DataModel, PropertyChangeSubject {
+public class DataModelManager implements DataModel {
 
     private Client client;
-    private String lastUpdate;
-    private int numberOfUpdates;
+
     private PropertyChangeSupport propertyChangeSupport;
 
     public DataModelManager(Client client)
     {
         this.client = client;
         client.startClient();
-        propertyChangeSupport.addPropertyChangeListener("updated", this::updated);
         propertyChangeSupport = new PropertyChangeSupport(this);
+        propertyChangeSupport.addPropertyChangeListener("updated", this::updated);
+
     }
+
 
     private void updated(PropertyChangeEvent event)
     {
@@ -42,6 +43,7 @@ public class DataModelManager implements DataModel, PropertyChangeSubject {
 
     @Override
     public void setTimeStamp(Date timeStamp) {
+
         client.setTimeStamp(timeStamp);
 //        SimpleDateFormat sdfDate = new SimpleDateFormat("HH:mm:ss");
 //        String strDate = sdfDate.format(timeStamp);

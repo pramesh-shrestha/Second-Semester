@@ -51,7 +51,7 @@ public class SocketHandler implements Runnable {
 
     private void onNewLogEntry(PropertyChangeEvent evt) {
         try {
-            outToClient.writeObject(new Request(evt.getPropertyName(), evt.getNewValue())); //what is getNewValue here??
+            outToClient.writeObject(new Request(evt.getPropertyName(), evt.getNewValue()));
         } catch (IOException e) {
             e.printStackTrace();
         }

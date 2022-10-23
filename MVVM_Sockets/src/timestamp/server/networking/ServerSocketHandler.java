@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.Date;
 
 public class ServerSocketHandler implements Runnable
 {
@@ -52,7 +53,8 @@ public class ServerSocketHandler implements Runnable
       }
       else if("SetTimeStamp".equals(request.getType()))
       {
-        //todo implement settimestamp
+        dataModel.setTimeStamp((Date) request.getArg());
+        outToClient.writeObject(new Request("SetTimeStamp", (Date) request.getArg()));
       }
     }
     catch (IOException e)

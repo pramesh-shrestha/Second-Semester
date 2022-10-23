@@ -36,7 +36,7 @@ public class DataModelManager implements DataModel, PropertyChangeSubject
         String last = lastUpdate;
         lastUpdate = strDate;
         numberOfUpdates++;
-        propertyChangeSupport.firePropertyChange("Updated", last, lastUpdate);
+        propertyChangeSupport.firePropertyChange("updated", last, lastUpdate);
     }
 
     @Override

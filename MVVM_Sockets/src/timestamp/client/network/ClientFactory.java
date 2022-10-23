@@ -4,13 +4,12 @@ public class ClientFactory
 {
   private Client client;
 
-  public ClientFactory()
-  {
-    client = new SocketClient();
-  }
-
   public Client getClient()
   {
+    if(client == null)
+    {
+      client = new SocketClient();
+    }
     return client;
   }
 }

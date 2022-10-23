@@ -2,7 +2,7 @@ package timestamp.client.model;
 
 
 import timestamp.client.network.ClientFactory;
-import timestamp.server.model.DataModel;
+import timestamp.client.model.DataModel;
 
 public class ModelFactory {
 

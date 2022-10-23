@@ -11,20 +11,24 @@ public class SocketServer
 {
   private DataModel dataModel;
 
-  public SocketServer()
+  public SocketServer(DataModel dataModel)
   {
-    dataModel = new DataModelManager();
+    this.dataModel = dataModel;
   }
 
   public void startServer()
   {
     try
     {
-      ServerSocket serverSocket = new ServerSocket(2910);
+      System.out.println("Server started..");
+      ServerSocket serverSocket = new ServerSocket(6000);
       while(true)
       {
         Socket socket = serverSocket.accept();
-        new Thread(() -> new ServerSocketHandler(socket,dataModel));
+        System.out.println("connected");
+        ServerSocketHandler ssh = new ServerSocketHandler(socket,dataModel);
+        Thread thread = new Thread(ssh);
+        thread.start();
       }
     }
     catch (IOException e)

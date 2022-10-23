@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 import timestamp.client.model.PropertyChangeSubject;
-import timestamp.server.model.DataModel;
+import timestamp.client.model.DataModel;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeSupport;
@@ -23,7 +23,7 @@ public class TimestampViewModel {
         this.model = model;
         updateTimeStamp = new SimpleStringProperty("Last update: ");
         numberOfUpdates=new SimpleStringProperty("0");
-        model.addPropertyChangeListener((PropertyChangeEvent evt) -> this.updated());
+        model.addPropertyChangeListener("updated", evt-> this.updated());
     }
 
     public void updated() {

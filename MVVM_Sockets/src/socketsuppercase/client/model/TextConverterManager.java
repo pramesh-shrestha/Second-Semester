@@ -17,6 +17,7 @@ public class TextConverterManager implements TextConverter {
         this.client = client;
         client.startClient();
         client.addListener("NewLogEntry", this::onNewLogEntry);
+
     }
 
     private void onNewLogEntry(PropertyChangeEvent evt) {

@@ -1,7 +1,8 @@
 package timestamp.shared;
 
+import java.io.Serializable;
 
-public class Request
+public class Request implements Serializable
 {
   private String type;
   private Object arg;

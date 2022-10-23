@@ -7,16 +7,14 @@ import timestamp.client.network.ClientFactory;
 import timestamp.client.view.ViewHandler;
 import timestamp.client.viewmodel.ViewModelFactory;
 
-
-
 public class TimestampApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        ClientFactory cf = new ClientFactory();
-        ModelFactory mf = new ModelFactory(cf);
-        ViewModelFactory viewModelFactory = new ViewModelFactory(mf);
-        ViewHandler viewHandler = new ViewHandler(viewModelFactory);
+        ClientFactory clientFactory = new ClientFactory();
+        ModelFactory modelFactory = new ModelFactory(clientFactory);
+        ViewModelFactory vmf = new ViewModelFactory(modelFactory);
+        ViewHandler viewHandler = new ViewHandler(vmf);
         viewHandler.start();
 
     }

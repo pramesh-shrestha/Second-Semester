@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SocketClient implements Client
@@ -24,7 +25,7 @@ public class SocketClient implements Client
   {
     try
     {
-      Socket socket = new Socket("localhost",2910);
+      Socket socket = new Socket("localhost",6000);
       ObjectOutputStream outToServer = new ObjectOutputStream(socket.getOutputStream());
       ObjectInputStream inFromServer = new ObjectInputStream(socket.getInputStream());
 
@@ -86,7 +87,8 @@ public class SocketClient implements Client
     try
     {
       Request response = request("SetTimeStamp", timeStamp);
-      timeStamp.setTime((long)response.getArg());
+
+
 
     }
     catch (IOException | ClassNotFoundException e)
@@ -97,7 +99,7 @@ public class SocketClient implements Client
 
 private Request request(String type, Object arg) throws IOException, ClassNotFoundException
 {
-  Socket socket = new Socket("localhost", 2910);
+  Socket socket = new Socket("localhost", 6000);
   ObjectOutputStream outToServer = new ObjectOutputStream(socket.getOutputStream());
   ObjectInputStream inFromServer = new ObjectInputStream(socket.getInputStream());
   outToServer.writeObject(new Request(type,arg));
