@@ -1,6 +1,6 @@
 package timestamp.server.model;
 
-import timestamp.client.model.PropertyChangeSubject;
+import timestamp.server.client.model.PropertyChangeSubject;
 
 import java.util.Date;
 

@@ -15,7 +15,7 @@ public class Counter
 
   public synchronized  void increment()
   {
-    if(value >= max)
+    while(value >= max)
     {
       try
       {
@@ -28,12 +28,13 @@ public class Counter
     }
     value++;
     System.out.println(value + ":" + Thread.currentThread().getName());
-    notifyAll();
+    if(value == min + 1)
+      notifyAll();
   }
 
   public synchronized void decrement()
   {
-    if(value <= min)
+    while(value <= min)
     {
       try
       {
@@ -46,7 +47,8 @@ public class Counter
     }
     value--;
     System.out.println(value + ":" + Thread.currentThread().getName());
-    notifyAll();
+    if(value == max - 1)
+      notifyAll();
 
   }
 

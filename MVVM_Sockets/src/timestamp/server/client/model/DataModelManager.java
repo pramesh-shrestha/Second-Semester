@@ -1,42 +1,55 @@
-package timestamp.server.model;
+package timestamp.server.client.model;
 
-import timestamp.server.client.model.PropertyChangeSubject;
 
+import timestamp.server.client.network.Client;
+
+import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class DataModelManager implements DataModel, PropertyChangeSubject
-{
+public class DataModelManager implements DataModel {
 
-    private String lastUpdate;
-    private int numberOfUpdates;
+    private Client client;
+
     private PropertyChangeSupport propertyChangeSupport;
 
-    public DataModelManager() {
+    public DataModelManager(Client client)
+    {
+        this.client = client;
+        client.startClient();
         propertyChangeSupport = new PropertyChangeSupport(this);
+        propertyChangeSupport.addPropertyChangeListener("updated", this::updated);
+
+    }
+
+
+    private void updated(PropertyChangeEvent event)
+    {
+        propertyChangeSupport.firePropertyChange(event);
     }
 
     @Override
     public String getLastUpdateTimeStamp() {
-        return lastUpdate;
+        return client.getLastUpdateTimeStamp();
     }
 
     @Override
     public int getNumberOfUpdates() {
-        return numberOfUpdates;
+        return client.getNumberOfUpdates();
     }
 
     @Override
     public void setTimeStamp(Date timeStamp) {
-        SimpleDateFormat sdfDate = new SimpleDateFormat("HH:mm:ss");
-        String strDate = sdfDate.format(timeStamp);
-        System.out.println(strDate);
-        String last = lastUpdate;
-        lastUpdate = strDate;
-        numberOfUpdates++;
-        propertyChangeSupport.firePropertyChange("updated", last, lastUpdate);
+
+        client.setTimeStamp(timeStamp);
+//        SimpleDateFormat sdfDate = new SimpleDateFormat("HH:mm:ss");
+//        String strDate = sdfDate.format(timeStamp);
+//        System.out.println(strDate);
+//        String last = lastUpdate;
+//        lastUpdate = strDate;
+//        numberOfUpdates++;
+//        propertyChangeSupport.firePropertyChange("Updated", last, lastUpdate);
     }
 
     @Override
