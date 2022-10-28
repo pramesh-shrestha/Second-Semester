@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Assignment1/Assignment1.iml" filepath="$PROJECT_DIR$/Assignment1/Assignment1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment2/Assignment2.iml" filepath="$PROJECT_DIR$/Assignment2/Assignment2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment2_Chat System/Assignment2_Chat System.iml" filepath="$PROJECT_DIR$/Assignment2_Chat System/Assignment2_Chat System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment3_RMI_MVVM/Assignment3_RMI_MVVM.iml" filepath="$PROJECT_DIR$/Assignment3_RMI_MVVM/Assignment3_RMI_MVVM.iml" />
       <module fileurl="file://$PROJECT_DIR$/Classroom.iml" filepath="$PROJECT_DIR$/Classroom.iml" />
       <module fileurl="file://$PROJECT_DIR$/MVVM/MVVM.iml" filepath="$PROJECT_DIR$/MVVM/MVVM.iml" />
       <module fileurl="file://$PROJECT_DIR$/MVVM_Observer/MVVM_Observer.iml" filepath="$PROJECT_DIR$/MVVM_Observer/MVVM_Observer.iml" />
@@ -11,6 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/ObserverPattern/ObserverPattern.iml" filepath="$PROJECT_DIR$/ObserverPattern/ObserverPattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pattern/Pattern.iml" filepath="$PROJECT_DIR$/Pattern/Pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RMI/RMI.iml" filepath="$PROJECT_DIR$/RMI/RMI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RMI_MVVM/RMI_MVVM.iml" filepath="$PROJECT_DIR$/RMI_MVVM/RMI_MVVM.iml" />
       <module fileurl="file://$PROJECT_DIR$/Singleton_Multiton/Singleton_Multiton.iml" filepath="$PROJECT_DIR$/Singleton_Multiton/Singleton_Multiton.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sockets/Sockets.iml" filepath="$PROJECT_DIR$/Sockets/Sockets.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sockets_Multithreading/Sockets_Multithreading.iml" filepath="$PROJECT_DIR$/Sockets_Multithreading/Sockets_Multithreading.iml" />
