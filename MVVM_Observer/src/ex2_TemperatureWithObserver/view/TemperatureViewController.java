@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 
 public class TemperatureViewController
 {
+  @javafx.fxml.FXML
   @FXML
   private Label outputLabel1;
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Adapter/Adapter.iml" filepath="$PROJECT_DIR$/Adapter/Adapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment1/Assignment1.iml" filepath="$PROJECT_DIR$/Assignment1/Assignment1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment2/Assignment2.iml" filepath="$PROJECT_DIR$/Assignment2/Assignment2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Assignment2_Chat System/Assignment2_Chat System.iml" filepath="$PROJECT_DIR$/Assignment2_Chat System/Assignment2_Chat System.iml" />
@@ -13,8 +14,10 @@
       <module fileurl="file://$PROJECT_DIR$/ObserverPattern/ObserverPattern.iml" filepath="$PROJECT_DIR$/ObserverPattern/ObserverPattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pattern/Pattern.iml" filepath="$PROJECT_DIR$/Pattern/Pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/Practice/Practice.iml" filepath="$PROJECT_DIR$/Practice/Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Producer_Consumer/Producer_Consumer.iml" filepath="$PROJECT_DIR$/Producer_Consumer/Producer_Consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/RMI/RMI.iml" filepath="$PROJECT_DIR$/RMI/RMI.iml" />
       <module fileurl="file://$PROJECT_DIR$/RMI_MVVM/RMI_MVVM.iml" filepath="$PROJECT_DIR$/RMI_MVVM/RMI_MVVM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ReaderWriterProblem/ReaderWriterProblem.iml" filepath="$PROJECT_DIR$/ReaderWriterProblem/ReaderWriterProblem.iml" />
       <module fileurl="file://$PROJECT_DIR$/Singleton_Multiton/Singleton_Multiton.iml" filepath="$PROJECT_DIR$/Singleton_Multiton/Singleton_Multiton.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sockets/Sockets.iml" filepath="$PROJECT_DIR$/Sockets/Sockets.iml" />
       <module fileurl="file://$PROJECT_DIR$/Sockets_Multithreading/Sockets_Multithreading.iml" filepath="$PROJECT_DIR$/Sockets_Multithreading/Sockets_Multithreading.iml" />

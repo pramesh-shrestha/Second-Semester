@@ -20,9 +20,4 @@ public class ClockTest
     clock.set(1, 1, 60);
 
   }
-
-  @Test public void getHour()
-  {
-
-  }
 }

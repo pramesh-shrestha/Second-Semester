@@ -8,9 +8,9 @@ import java.util.List;
 
 public interface ClientChatModel extends PropertyChangeSubject
 {
-  Boolean checkUsername(String user,String password);
+  boolean checkUsername(String user,String password);
   String sendMessage(String user,String msg);
-  Boolean login(String username, String password);
+  boolean login(String username, String password);
 
   ArrayList<String > getAllUsername();
   ArrayList<String> getAllMessages();

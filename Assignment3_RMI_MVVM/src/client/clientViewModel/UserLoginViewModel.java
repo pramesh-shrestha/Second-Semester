@@ -34,14 +34,13 @@ public class UserLoginViewModel
   return error;
  }
 
- public Boolean login()
+ public boolean login()
   {
    String username = usernameProperty().get();
    String password = passwordProperty().get();
    if (username != null && !username.equals(""))
    {
     return clientChatModel.login(username, password);
-
    }
    else
    {

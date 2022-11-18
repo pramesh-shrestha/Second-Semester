@@ -1,15 +1,18 @@
 package server;
 
 import server.serverModel.ServerChatModelManager;
-import server.serverNetwork.SocketServer;
+import server.serverNetwork.RMIServer;
+
+import java.rmi.AlreadyBoundException;
+import java.rmi.RemoteException;
 
 public class RunServer
 {
-  public static void main(String[] args)
+  public static void main(String[] args) throws RemoteException, AlreadyBoundException
   {
-    ServerChatModelManager serverChatModelManager = new ServerChatModelManager();
-    SocketServer server = new SocketServer(serverChatModelManager);
+    RMIServer server = new RMIServer(new ServerChatModelManager());
     server.startServer();
+
 
   }
 

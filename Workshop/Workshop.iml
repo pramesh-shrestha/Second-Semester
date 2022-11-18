@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="JavaFx" level="application" />
     <orderEntry type="module" module-name="MVVM" />
+    <orderEntry type="library" exported="" name="javafx" level="application" />
   </component>
 </module>

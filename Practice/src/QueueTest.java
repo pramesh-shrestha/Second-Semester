@@ -1,6 +1,7 @@
-package simpl;
 
+import Queues.QueueADT;
 import org.junit.jupiter.api.*;
+import simpleQueue.simpl.SimpleBoundedArrayQueueCorrect;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,7 +10,7 @@ class QueueTest {
 
     @BeforeEach
     public void setup(){
-        q = new SimpleBoundedArrayQueueCorrect(5);
+        q = (QueueADT) new SimpleBoundedArrayQueueCorrect(5);
     }
 
     @Test

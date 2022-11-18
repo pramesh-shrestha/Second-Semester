@@ -1,8 +1,9 @@
 package queue.simpl;
 
-import queue.QueueADT;
+import simpleQueue.QueueADT;
 
-public class SimpleBoundedArrayQueueB<T> implements QueueADT<T> {
+public class SimpleBoundedArrayQueueB<T> implements QueueADT<T>
+{
 
 	private T[] q;
 	private int  count;

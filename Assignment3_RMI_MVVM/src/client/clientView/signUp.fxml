@@ -60,7 +60,7 @@
                </image>
             </ImageView>
             <Label fx:id="errorLabel" alignment="CENTER" layoutX="105.0" layoutY="440.0" prefHeight="20.0" prefWidth="164.0" textFill="#299a34" />
-            <Button layoutX="136.0" layoutY="385.0" mnemonicParsing="false" onAction="#onGoToLoginButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: transparent;" text="Go To Login" textFill="#0598ff" />
+            <Button layoutX="136.0" layoutY="385.0" mnemonicParsing="false" onAction="#onGoToLoginButton" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: transparent;" text="Go To login" textFill="#0598ff" />
             <PasswordField fx:id="signUpPasswordField" alignment="CENTER" layoutX="106.0" layoutY="273.0" prefHeight="30.0" prefWidth="164.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font size="14.0" />

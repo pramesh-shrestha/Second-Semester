@@ -1,4 +1,4 @@
-package queue;
+package simpleQueue;
 
 public interface QueueADT<T> {
 

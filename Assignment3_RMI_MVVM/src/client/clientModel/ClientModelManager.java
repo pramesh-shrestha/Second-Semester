@@ -44,14 +44,14 @@ public class ClientModelManager implements ClientChatModel
 
 
   @Override
-  public Boolean login(String username, String password)
+  public boolean login(String username, String password)
   {
     users.add(username);
     return client.login(username, password);
   }
 
   @Override
-  public Boolean checkUsername(String user, String password)
+  public boolean checkUsername(String user, String password)
   {
     return client.checkUser(user,password);
   }

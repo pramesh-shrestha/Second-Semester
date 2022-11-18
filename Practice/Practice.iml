@@ -9,7 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Thread" exported="" />
-    <orderEntry type="library" exported="" name="JavaFx" level="application" />
     <orderEntry type="module-library">
       <library name="JUnit4">
         <CLASSES>
@@ -36,5 +35,8 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="postgresql-42.5.0" level="project" />
+    <orderEntry type="library" exported="" name="javafx" level="application" />
+    <orderEntry type="module" module-name="UnitTesting" />
   </component>
 </module>

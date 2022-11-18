@@ -30,8 +30,6 @@ public class RMIClient implements ClientCallBack, Client
       Registry registry = LocateRegistry.getRegistry("localhost", 1099);
       server = (RMIServer) registry.lookup("UpperCaseServer");
       server.registerCallBack(this);
-
-
     }
     catch (RemoteException | NotBoundException e)
     {

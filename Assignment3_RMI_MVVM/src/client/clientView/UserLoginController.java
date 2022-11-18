@@ -29,7 +29,7 @@ public class UserLoginController implements ViewController
   }
   public void onLoginButton( )
   {
-    Boolean value = userLoginViewModel.login();
+    boolean value = userLoginViewModel.login();
     if(value)
     {
       viewHandler.openChatWindow();

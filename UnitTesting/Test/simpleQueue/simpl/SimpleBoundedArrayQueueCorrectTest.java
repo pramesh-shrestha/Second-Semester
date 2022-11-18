@@ -2,12 +2,13 @@ package simpleQueue.simpl;
 
 import org.junit.Before;
 import org.junit.Test;
+import simpleQueue.QueueADT;
 
 import static org.junit.Assert.*;
 
 public class SimpleBoundedArrayQueueCorrectTest
 {
-  private queue.QueueADT<String> q;
+  private QueueADT<String> q;
 
   @Before
   public void setUp() throws Exception

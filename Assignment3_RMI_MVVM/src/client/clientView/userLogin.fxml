@@ -47,7 +47,7 @@
                   <Font size="11.0" />
                </font>
             </Hyperlink>
-            <Text fill="#0598ff" layoutX="131.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login">
+            <Text fill="#0598ff" layoutX="131.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User login">
                <font>
                   <Font size="20.0" />
                </font>
@@ -69,7 +69,7 @@
                </image>
             </ImageView>
             <Label fx:id="errorLabel" alignment="CENTER" layoutX="71.0" layoutY="427.0" prefHeight="23.0" prefWidth="220.0" textFill="RED" />
-            <Button layoutX="148.0" layoutY="328.0" mnemonicParsing="false" onAction="#onLoginButton" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #0598ff;" text="Login" textFill="WHITE" />
+            <Button layoutX="148.0" layoutY="328.0" mnemonicParsing="false" onAction="#onLoginButton" prefHeight="30.0" prefWidth="62.0" style="-fx-background-color: #0598ff;" text="login" textFill="WHITE" />
             <TextField fx:id="loginUsernameField" alignment="CENTER" layoutX="105.0" layoutY="207.0" prefHeight="26.0" prefWidth="161.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font size="14.0" />

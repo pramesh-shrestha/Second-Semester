@@ -1,10 +1,10 @@
 package socketsuppercase.server.networking;
 
+import socketsuppercase.client.network.RMIClient;
 import socketsuppercase.server.model.TextManager;
 import socketsuppercase.shared.networking.ClientCallBack;
 import socketsuppercase.shared.networking.RMIServer;
 import socketsuppercase.shared.transferobjects.LogEntry;
-
 
 import java.rmi.AlreadyBoundException;
 import java.rmi.RemoteException;
@@ -23,17 +23,10 @@ public class RMIServerImpl implements RMIServer
     UnicastRemoteObject.exportObject(this,0);
   }
 
-  public void startServer()
+  public void startServer() throws RemoteException, AlreadyBoundException
   {
-    try
-    {
-      Registry registry = LocateRegistry.createRegistry(1099);
-      registry.bind("UpperCaseServer", this);
-    }
-    catch (RemoteException | AlreadyBoundException e)
-    {
-      throw new RuntimeException(e);
-    }
+    Registry registry = LocateRegistry.createRegistry(1099);
+    registry.bind("UpperCaseServer", this);
   }
 
   @Override public String toUpperCase(String str)
