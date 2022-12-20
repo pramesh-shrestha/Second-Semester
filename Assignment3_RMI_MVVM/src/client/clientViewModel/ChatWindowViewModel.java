@@ -123,4 +123,8 @@ public class ChatWindowViewModel
   {
     this.user = user;
   }
+
+  public void addUserNameToTheLabel(String userName) {
+    userNameProperty().setValue(userName);
+  }
 }

@@ -1,8 +1,6 @@
-package Compressor.ConcreteStrategy;
+package Strategy.Compressor.ConcreteStrategy;
 
-import Compressor.Strategy.CompressionMethod;
-
-import java.lang.management.CompilationMXBean;
+import Strategy.Compressor.Strategy.CompressionMethod;
 
 public class SevenCCompression implements CompressionMethod
 {

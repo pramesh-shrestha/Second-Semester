@@ -1,18 +1,37 @@
 package observable;
 
-import javafx.beans.binding.IntegerBinding;
+
 import javafx.beans.binding.NumberBinding;
 import javafx.beans.property.SimpleIntegerProperty;
+
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ObservableController implements Initializable {
+  @FXML
+  private Text alphabetLabel;
+
+  @FXML
+  private TextField tf1;
+  @FXML
+  private TextField tf2;
+  private AlphabetAnimation alphabetAnimation;
   @Override public void initialize(URL url, ResourceBundle resourceBundle) {
     sumNonObservable();
     sumObservable();
+    alphabetAnimation = new AlphabetAnimation();
+    Timer timer = new Timer(true);
+    timer.schedule(alphabetAnimation, 1000 , 1000);
+    alphabetLabel.textProperty().bind(alphabetAnimation.textProperty());
   }
+
 
   private void sumNonObservable() {
     int a  = 10;

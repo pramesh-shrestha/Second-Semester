@@ -1,4 +1,6 @@
-package nastava.rmi1.funcionallity_ex.server;
+package funcionallity_ex.server;
+
+import boradcast_ex.server.ServerImpl;
 
 import java.rmi.AlreadyBoundException;
 import java.rmi.RemoteException;

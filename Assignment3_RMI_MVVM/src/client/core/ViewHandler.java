@@ -13,6 +13,7 @@ public class ViewHandler
   private Scene signUpScene;
   private Scene loginScene;
   private Scene chatScene;
+  private Scene privateScene;
   private Stage stage;
   private ViewModelFactory vmf;
 
@@ -78,6 +79,21 @@ public class ViewHandler
     stage.setTitle("Click Chat");
     stage.setScene(chatScene);
     stage.show();
+  }
+
+  public void openPrivateChatWindow(){
+    try
+    {
+      Parent root = loadFXML("../clientView/chatWindow.fxml");
+      privateScene = new Scene(root);
+    }
+    catch (IOException e)
+    {
+      throw new RuntimeException(e);
+    }
+    Stage privateStage = new Stage();
+    privateStage.setScene(privateScene);
+    privateStage.show();
   }
   private Parent loadFXML(String path) throws IOException
   {

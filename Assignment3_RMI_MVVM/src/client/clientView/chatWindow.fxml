@@ -53,6 +53,6 @@
             <ListView fx:id="userListView" layoutX="4.0" layoutY="12.0" prefHeight="353.0" prefWidth="154.0" style="-fx-background-color: ECECEC;" />
          </children>
       </Pane>
-      <Button layoutX="611.0" layoutY="425.0" mnemonicParsing="false" onAction="#onSelectButton" prefHeight="28.0" prefWidth="82.0" text="Select" />
+      <Button layoutX="611.0" layoutY="425.0" mnemonicParsing="false" onAction="#onPrivateButton" prefHeight="28.0" prefWidth="82.0" text="Private" />
    </children>
 </AnchorPane>

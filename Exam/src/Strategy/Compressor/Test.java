@@ -1,13 +1,11 @@
-package Compressor;
+package Strategy.Compressor;
 
-import Compressor.ConcreteStrategy.SevenCCompression;
-import Compressor.ConcreteStrategy.ZipCompression;
-import Compressor.Context.Compressor;
-import Compressor.Strategy.CompressionMethod;
+import Strategy.Compressor.ConcreteStrategy.SevenCCompression;
+import Strategy.Compressor.ConcreteStrategy.ZipCompression;
+import Strategy.Compressor.Context.Compressor;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Test
 {

@@ -62,7 +62,7 @@ public class RMIClient implements Client, ClientCallBack
     try
     {
       boolean value = server.checkUser(user);
-      if(value)
+      if(!value)
         server.addUser(new User(user,password));
       return value;
     }

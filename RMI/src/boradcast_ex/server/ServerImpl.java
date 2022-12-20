@@ -1,7 +1,9 @@
-package nastava.rmi1.boradcast_ex.server;
+package boradcast_ex.server;
 
-import nastava.rmi1.boradcast_ex.shared.UpperCaseClient;
-import nastava.rmi1.boradcast_ex.shared.UpperCaseServer;
+
+
+import boradcast_ex.shared.UpperCaseClient;
+import boradcast_ex.shared.UpperCaseServer;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;

@@ -1,7 +1,8 @@
-package nastava.rmi1.boradcast_ex.client;
+package boradcast_ex.client;
 
-import nastava.rmi1.boradcast_ex.shared.UpperCaseClient;
-import nastava.rmi1.boradcast_ex.shared.UpperCaseServer;
+import boradcast_ex.shared.UpperCaseClient;
+import boradcast_ex.shared.UpperCaseServer;
+
 
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -23,9 +24,7 @@ public class ClientImpl implements UpperCaseClient {
             server = (UpperCaseServer) registry.lookup("Server");
             //register client
             server.registerClient(this);
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        } catch (NotBoundException e) {
+        } catch (RemoteException | NotBoundException e) {
             e.printStackTrace();
         }
     }

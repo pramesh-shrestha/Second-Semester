@@ -29,7 +29,7 @@ public class Robot
   public void move()
   {
     behaviourStrategy.moveCommand(board, new Point(2, 3));
-    System.out.println(name + " moved");
+    System.out.println(name + " moved 2 steps horizontally and 3 steps vertically.");
   }
 
 

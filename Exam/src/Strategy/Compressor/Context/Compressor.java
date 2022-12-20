@@ -1,6 +1,6 @@
-package Compressor.Context;
+package Strategy.Compressor.Context;
 
-import Compressor.Strategy.CompressionMethod;
+import Strategy.Compressor.Strategy.CompressionMethod;
 
 import java.util.List;
 
@@ -19,7 +19,6 @@ public class Compressor
 
   public void compress(List<String> files)
   {
-    System.out.println("It is compressing the file");
     for (int i = 0; i < files.size(); i++)
     {
       String compress = method.compress(files.get(i));

@@ -1,4 +1,4 @@
-package nastava.rmi1.boradcast_ex.shared;
+package boradcast_ex.shared;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

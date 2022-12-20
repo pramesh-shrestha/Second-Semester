@@ -49,7 +49,6 @@ public class ServerChatModelManager implements ServerChatModel
 
   @Override public boolean checkUser(String user)
   {
-    System.out.println("i am here");
     for (int i = 0; i < loginCredentials.size(); i++)
     {
       if(loginCredentials.get(i).getUsername().equals(user))

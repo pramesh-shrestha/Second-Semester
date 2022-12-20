@@ -1,4 +1,8 @@
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
   public class lotto1
   {
@@ -17,4 +21,10 @@ import java.util.Random;
       System.out.println(numbers);
     }
   }
+
+
+
+
+
+
 

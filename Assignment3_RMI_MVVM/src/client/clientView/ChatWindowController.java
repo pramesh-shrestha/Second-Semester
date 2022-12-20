@@ -3,6 +3,7 @@ package client.clientView;
 import client.clientViewModel.ChatWindowViewModel;
 import client.core.ViewHandler;
 import client.core.ViewModelFactory;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -20,11 +21,13 @@ public class ChatWindowController implements ViewController {
   private Label userNameLabel;
   private ChatWindowViewModel chatWindowViewModel;
   private ViewHandler viewHandler;
+  private  ViewModelFactory viewModelFactory;
   private Boolean bool = true;
 
   @Override public void init(ViewHandler viewHandler,
       ViewModelFactory viewModelFactory) {
     this.viewHandler = viewHandler;
+    this.viewModelFactory = viewModelFactory;
     chatWindowViewModel = viewModelFactory.getChatWindowViewModel();
     chatAreaField.setItems(chatWindowViewModel.getMessages());
     textField.textProperty().bindBidirectional(chatWindowViewModel.textProperty());
@@ -50,11 +53,6 @@ public class ChatWindowController implements ViewController {
   }
 
   //private message
-  @FXML public void onSelectButton() {
-    bool = false;
-  }
-
-  //private message
 
   public void unSelect() {
     int user = userListView.getSelectionModel().getSelectedIndex();
@@ -67,5 +65,13 @@ public class ChatWindowController implements ViewController {
   public void onUnselectButton() {
     unSelect();
     bool = true;
+  }
+
+  public void onPrivateButton() {
+    String userName = userListView.getSelectionModel().getSelectedItem();
+    viewModelFactory.getChatWindowViewModel().addUserNameToTheLabel(userName);
+    viewHandler.openPrivateChatWindow();
+
+
   }
 }
