@@ -14,12 +14,12 @@ public class CookieJar
     list = new ArrayList<>(size);
   }
 
-  public int getMaxSize()
+  public synchronized int getMaxSize()
   {
     return maxSize;
   }
 
-  public List<Cookie> getList()
+  public synchronized List<Cookie> getList()
   {
     return list;
   }
@@ -40,7 +40,7 @@ public class CookieJar
     {
       try
       {
-        System.out.println("jar is full");
+        System.out.println("Jar is full. Baker is waiting");
         wait();
       }
       catch (InterruptedException e)
@@ -49,20 +49,21 @@ public class CookieJar
       }
     }
 
+
   }
 
-  public synchronized void finishedBaking(List<Cookie> cookies)
+  private void finishedBaking(List<Cookie> cookies)
   {
     for (int i = 0; i < cookies.size(); i++)
     {
-      if(list.size() < maxSize)
-      {
+      if(list.size() < maxSize) {
         System.out.println("cookies added to the jar");
         list.add(cookies.get(i));
       }
     }
-    if(list.size() == maxSize)
+    if(list.size() >= maxSize)
       notifyAll();
+
   }
 
   public synchronized void eat()
@@ -71,7 +72,7 @@ public class CookieJar
     {
       try
       {
-        System.out.println("jar is empty");
+        System.out.println("Jar is empty. Eater is waiting.");
         wait();
       }
       catch (InterruptedException e)
@@ -85,6 +86,7 @@ public class CookieJar
     {
       System.out.println("Cookies less than 5 in the jar");
       notifyAll();
+
     }
 
 

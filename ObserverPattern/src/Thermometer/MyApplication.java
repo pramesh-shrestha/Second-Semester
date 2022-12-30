@@ -13,6 +13,7 @@ public class MyApplication extends Application
   {
     // Model
     TemperatureModel model = new TemperatureModelManager();
+    model.addTemperature("t1", 20.0);
 
     // View
     ViewHandler view = new ViewHandler(model);

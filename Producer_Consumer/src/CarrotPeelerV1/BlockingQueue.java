@@ -6,7 +6,7 @@ import utility.collection.QueueADT;
 public class BlockingQueue<T> implements Buffer<T>
 {
   private QueueADT<T> queue;
-  int count = 1;
+  private int count = 1;
 
   public BlockingQueue(int capacity)
   {

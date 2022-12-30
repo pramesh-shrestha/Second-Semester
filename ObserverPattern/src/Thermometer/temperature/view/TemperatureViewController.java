@@ -56,11 +56,8 @@ public class TemperatureViewController
 
    @FXML private void onFilter()
    {
-      String oldValue = filterLabel.getText();
-      if (oldValue.equals("All"))
-      {
-         oldValue = null;
-      }
+
+
       thermometerId = filterField.getText();
       if (thermometerId.isEmpty())
       {

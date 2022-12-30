@@ -1,38 +1,103 @@
 package jUnit;
 
 import org.junit.Test;
+
+import java.rmi.AlreadyBoundException;
 import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class ArrayListTestTest {
   private ArrayList<String> list;
+  private int maxSize = 5;
 
   @org.junit.Before
   public void setUp() throws Exception {
-    list = new ArrayList<>();
+    list = new ArrayList<>(maxSize);
   }
 
   @Test
-  public void testingNull(){
-    assertEquals(false,list.contains(null));
+  public void testingEmptyArrayList(){
+    assertEquals(0,list.size());
   }
 
   //	add(int index, T element)
+
   @Test
-  public void addingELementAtSpecifiedIndex(){
-    list.add(0,"Java");
-    list.add(1, "SWE");
+  public void addingOneELementAtSpecifiedIndex(){
+    if(list.size() < 5)
+      list.add(0,"Java");
+    String text = list.get(0);
+    assertEquals("Java", text);
+  }
+
+  @Test
+  public void addingMoreELementsAtSpecifiedIndex(){
+    if (list.size() < 5) {
+      list.add(0,"Java");
+      list.add(1, "SWE");
+    }
     String text = list.get(1);
     assertEquals("SWE", text);
   }
 
+  //Boundary and branch test
+  @Test
+  public void addingFourElements() {
+    if (list.size() < 5) {
+      list.add(0, "Java");
+      list.add(1, "SWE");
+      list.add(2, "DBS");
+      list.add(3, "SEP");
+    }
+    assertEquals(4, list.size());
+  }
+
+  @Test
+  public void addingFiveElements() {
+    if (list.size() < 5) {
+      list.add(0, "Java");
+      list.add(1, "SWE");
+      list.add(2, "DBS");
+      list.add(3, "SEP");
+      list.add(4, "C#");
+    }
+    assertEquals(5, list.size());
+  }
+
+  @Test
+  public void addingSixElements() {
+      list.add(0, "Java");
+      list.add(1, "SWE");
+      list.add(2, "DBS");
+      list.add(3, "SEP");
+      list.add(4, "C#");
+    try {
+      if (list.size() < 6) {
+        list.add(5, "Python");
+        assertEquals(6, list.size());
+
+      } else {
+        throw new Exception("Cannot add more than 5 elements");
+      }
+    }
+    catch (Exception e) {
+      assertEquals("Cannot add more than 5 elements", e.getMessage());
+    }
+  }
+
+  //Exceptional situation test
   @Test
   public void addingNewElementToAlreadyAssignedIndex(){
-    list.add(0,"Java");
-    list.add(1, "SWE");
-    list.add(1,"DBS");
+    if (list.size() < 5) {
+      list.add(0,"Java");
+      list.add(1, "SWE");
+      list.add(2,"DBS");
+      list.add(1,"SEP");
+    }
 
+    assertEquals(1, list.indexOf("SEP"));
     assertEquals(2, list.indexOf("SWE"));
+    assertEquals(3, list.indexOf("DBS"));
   }
 
   @Test(expected = IndexOutOfBoundsException.class)
@@ -60,11 +125,10 @@ public class ArrayListTestTest {
 
   @Test
   public void addNullToTheList(){
-    try {
-      list.add(null);
-    } catch (Exception e) {
-      fail("Should not throw any exception");
-    }
+
+    list.add(null);
+    assertEquals(null,list.get(0));
+
   }
 
   //contains(T element)

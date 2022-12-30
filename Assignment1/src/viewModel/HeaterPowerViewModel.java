@@ -3,7 +3,7 @@ package viewModel;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import model.TemperatureModel;
+import model.mediator.TemperatureModel;
 
 public class HeaterPowerViewModel
 {
@@ -46,7 +46,7 @@ public class HeaterPowerViewModel
       new Thread(()->{
         try
         {
-          Thread.sleep(31000);
+          Thread.sleep(11000);
           String power1 = String.valueOf(temperatureModel.getRadiator().getPower());
 
           Platform.runLater(()->{

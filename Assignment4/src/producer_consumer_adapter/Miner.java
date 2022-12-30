@@ -26,15 +26,7 @@ public class Miner implements Runnable{
     Random random  = new Random();
     while(true){
       int value = random.nextInt(5) + 1;
-      while(depositValuables.getSize() > depositValuables.getCapacity()){
-        try {
 
-          wait();
-        }
-        catch (InterruptedException e) {
-          throw new RuntimeException(e);
-        }
-      }
       if(value == 1){
         depositValuables.add(MultitonValuables.item("Diamond"));
       } else if(value == 2){
@@ -48,7 +40,7 @@ public class Miner implements Runnable{
       }
       System.out.println(depositValuables.getSize() + "size");
       System.out.println(depositValuables.getCapacity() + "capacity");
-      sleep();
+//      sleep();
     }
   }
 }

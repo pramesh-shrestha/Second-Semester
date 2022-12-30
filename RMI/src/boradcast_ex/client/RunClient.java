@@ -1,4 +1,4 @@
-package nastava.rmi1.boradcast_ex.client;
+package boradcast_ex.client;
 
 import java.rmi.RemoteException;
 import java.util.Scanner;

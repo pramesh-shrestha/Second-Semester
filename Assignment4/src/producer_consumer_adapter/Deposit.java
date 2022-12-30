@@ -41,6 +41,7 @@ public class Deposit<T> implements DepositValuables<T> {
     }
     T valuable = list.get(0);
     list.remove(0);
+    notifyAll();
     return valuable;
   }
 

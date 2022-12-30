@@ -3,10 +3,8 @@ package viewModel;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import model.TemperatureModel;
+import model.mediator.TemperatureModel;
 import model.temperature.Temperature;
-
-import java.beans.PropertyChangeEvent;
 
 public class TemperatureViewModel
 {
@@ -24,7 +22,7 @@ public class TemperatureViewModel
     thermometer1 = new SimpleStringProperty();
     thermometer2 = new SimpleStringProperty();
     warning = new SimpleStringProperty();
-    temperatureModel.addPropertyChangeListener("added", evt ->tempUpdate(evt));
+    temperatureModel.addPropertyChangeListener("added", evt ->tempUpdate());
   }
 
   public void getLastTemp()
@@ -37,7 +35,7 @@ public class TemperatureViewModel
    * last inserted temperature from the database, and then updates the
    * thermometer's value
    */
-  private void tempUpdate(PropertyChangeEvent evt)
+  private void tempUpdate()
   {
     Temperature t1 = temperatureModel.getLastInsertedTemperature("t1");
     Temperature t2 = temperatureModel.getLastInsertedTemperature("t2");

@@ -19,6 +19,7 @@ public class BlockingQueue<T> implements Buffer<T>
     {
       try
       {
+        System.out.println("Insertion on waiting state");
         wait();
       }
       catch (InterruptedException e)
@@ -27,6 +28,7 @@ public class BlockingQueue<T> implements Buffer<T>
       }
     }
     queue.enqueue(element);
+    System.out.println("Inserted");
     notifyAll();
   }
 
@@ -37,6 +39,7 @@ public class BlockingQueue<T> implements Buffer<T>
     {
       try
       {
+        System.out.println("Removal on waiting state");
         wait();
       }
       catch (InterruptedException e)
@@ -45,6 +48,7 @@ public class BlockingQueue<T> implements Buffer<T>
       }
     }
     T dequeue = queue.dequeue();
+    System.out.println("Removing element");
     notifyAll();
     return dequeue;
   }

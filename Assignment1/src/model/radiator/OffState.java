@@ -15,7 +15,7 @@ public class OffState implements RadiatorState
 
   @Override public void onTurnDown(Radiator radiator)
   {
-    //In the OffState turning down does nothing
+    System.out.println("The radiator is already on off state");
   }
 
   @Override public int getPower()

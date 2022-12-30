@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class TreasureRoomGuardsman implements TreasureRoomDoor{
   //this proxy class should delegate the Real Subject i.e. Treasure Room
   private TreasureRoom treasureRoom;
-
   public TreasureRoomGuardsman(TreasureRoom treasureRoom) {
     this.treasureRoom = treasureRoom;
   }
@@ -17,17 +16,14 @@ public class TreasureRoomGuardsman implements TreasureRoomDoor{
   public void add(ArrayList<MultitonValuables> valuables) {
     treasureRoom.add(valuables);
   }
-
   @Override
   public MultitonValuables retrieve(int choice) {
     return treasureRoom.retrieve(choice);
   }
-
   @Override
   public int look() {
     return treasureRoom.look();
   }
-
   @Override
   public int getTotalValuablesCount() {
     return treasureRoom.getTotalValuablesCount();

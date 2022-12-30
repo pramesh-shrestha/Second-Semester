@@ -1,6 +1,6 @@
 package model.indoor;
 
-import model.TemperatureModel;
+import model.mediator.TemperatureModel;
 
 public class Thermometer implements Runnable
 {

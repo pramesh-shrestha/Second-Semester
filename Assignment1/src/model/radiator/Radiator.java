@@ -1,8 +1,5 @@
 package model.radiator;
 
-import model.TemperatureModel;
-import model.TemperatureModelManager;
-
 public class Radiator
 {
   private RadiatorState currentState;

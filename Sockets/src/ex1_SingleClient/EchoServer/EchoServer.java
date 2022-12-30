@@ -24,21 +24,25 @@ public class EchoServer
 
         //creating an ObjectInputStream to read an Object from the client
         ObjectInputStream inFromClient = new ObjectInputStream(socket.getInputStream());
-        String obj = (String) inFromClient.readObject();//stuck here until sends something
-        System.out.println("Received: " + obj);
-
-        //converting the object received from the client to Uppercase to send it back to the client
-        String answer = obj.toUpperCase();
-
         //creating an ObjectOutputStream to write or send the Object back to the client
         ObjectOutputStream outToClient = new ObjectOutputStream(socket.getOutputStream());
-        outToClient.writeObject(answer);
-        System.out.println("Client Disconnected");
+
+        while (true) {
+          String obj = (String) inFromClient.readObject();//stuck here until sends something
+          System.out.println("Received: " + obj);
+          if(obj.equalsIgnoreCase("bye"))
+            break;
+
+          //converting the object received from the client to Uppercase to send it back to the client
+          String answer = obj.toUpperCase();
+          outToClient.writeObject(answer);
+        }
+        break;
       }
     }
     catch (IOException | ClassNotFoundException e)
     {
-      throw new RuntimeException(e);
+      System.out.println("Client Disconnected");
     }
 
   }

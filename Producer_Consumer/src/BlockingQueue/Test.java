@@ -6,23 +6,20 @@ public class Test
 {
   public static void main(String[] args)
   {
-    Buffer<String> text = new BlockingQueue<String>(4);
+    Buffer<String> text = new BlockingQueue<String>(3);
 
-    while(true)
-    {
-      while(!text.isFull())
-      {
-        text.put("a");
-        System.out.println("Inserted");
+    while (true) {
+      for (int i = 0; i <= 3; i++) {
+        new Thread(() -> {
+          text.put("a");
+        }).start();
       }
-      System.out.println("Insertion on waiting state");
-      while(!text.isEmpty())
-      {
-        text.take();
-        System.out.println("Removing element");
-      }
-      System.out.println("Removal on waiting state");
 
+      for (int i = 0; i <= 3; i++) {
+        new Thread(() -> {
+          text.take();
+        }).start();
+      }
     }
   }
 }

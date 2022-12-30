@@ -86,6 +86,10 @@ public class TreasureRoom implements TreasureRoomDoor {
     return getTreasureWorth();
   }
 
+  public synchronized int getTotalValuablesCount() {
+    return getDiamondCount() + getJewelCount() + getRubyCount() + getWoodenCoin() + getGoldNugget();
+  }
+
   @Override
   public synchronized void acquireRead() {
     while(king || activeTransporter > 0 || waitingTransporter > 0){
@@ -125,7 +129,8 @@ public class TreasureRoom implements TreasureRoomDoor {
   @Override
   public synchronized void releaseTransporterAccess() {
     activeTransporter--;
-    notifyAll();
+    if(activeTransporter == 0)
+      notifyAll();
   }
 
   @Override
@@ -171,7 +176,5 @@ public class TreasureRoom implements TreasureRoomDoor {
     return treasureWorth;
   }
 
-  public synchronized int getTotalValuablesCount() {
-    return getDiamondCount() + getJewelCount() + getRubyCount() + getWoodenCoin() + getGoldNugget();
-  }
+
 }
