@@ -7,9 +7,9 @@ import java.util.ArrayList;
 public class TreasureRoom implements TreasureRoomDoor {
   private ArrayList<MultitonValuables> valuables;
   private int activeAccountant = 0;
-  private boolean king = false;
-  private int waitingTransporter = 0;
-  private int activeTransporter = 0;
+  private int waitingWriter = 0;
+
+  private int activeWriter = 0;
   private int diamondCount = 0;
   private int jewelCount = 0;
   private int rubyCount = 0;
@@ -24,7 +24,7 @@ public class TreasureRoom implements TreasureRoomDoor {
   }
 
   @Override
-  public synchronized void add(ArrayList<MultitonValuables> gems) {
+  public synchronized void add(ArrayList<MultitonValuables> gems, String userType) {
     for (int i = 0; i < gems.size(); i++) {
       if (gems.get(i).equals("Diamond")) {
         diamondCount++;
@@ -48,7 +48,7 @@ public class TreasureRoom implements TreasureRoomDoor {
   }
 
   @Override
-  public synchronized MultitonValuables retrieve(int choice) {
+  public synchronized MultitonValuables retrieve(int choice,String userType) {
     MultitonValuables multitonValuable = null;
     while(valuables.size() <= 2){
       try {
@@ -82,7 +82,7 @@ public class TreasureRoom implements TreasureRoomDoor {
   }
 
   @Override
-  public synchronized int look() {
+  public synchronized int look(String userType) {
     return getTreasureWorth();
   }
 
@@ -92,7 +92,7 @@ public class TreasureRoom implements TreasureRoomDoor {
 
   @Override
   public synchronized void acquireRead() {
-    while(king || activeTransporter > 0 || waitingTransporter > 0){
+    while(activeWriter > 0 || waitingWriter > 0){
       try {
         wait();
       }
@@ -112,9 +112,9 @@ public class TreasureRoom implements TreasureRoomDoor {
   }
 
   @Override
-  public synchronized void acquireTransporterAccess() {
-    waitingTransporter++;
-    while(king || activeAccountant > 0){
+  public synchronized void acquireWrite() {
+    waitingWriter++;
+    while(activeWriter > 0 || activeAccountant > 0){
       try {
         wait();
       }
@@ -122,35 +122,17 @@ public class TreasureRoom implements TreasureRoomDoor {
         throw new RuntimeException(e);
       }
     }
-    waitingTransporter--;
-    activeTransporter++;
+    waitingWriter--;
+    activeWriter++;
   }
 
   @Override
-  public synchronized void releaseTransporterAccess() {
-    activeTransporter--;
-    if(activeTransporter == 0)
+  public synchronized void releaseWrite() {
+    activeWriter--;
+    if(activeWriter == 0)
       notifyAll();
   }
 
-  @Override
-  public synchronized void acquireKingAccess() {
-    while(activeAccountant > 0 || activeTransporter > 0){
-      try {
-        wait();
-      }
-      catch (InterruptedException e) {
-        throw new RuntimeException(e);
-      }
-    }
-    king = true;
-  }
-
-  @Override
-  public synchronized void releaseKingAccess() {
-    king = false;
-    notifyAll();
-  }
 
   public synchronized int getDiamondCount() {
     return diamondCount;

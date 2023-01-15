@@ -13,7 +13,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SocketClient implements Client
+public class  SocketClient implements Client
 {
 
   private PropertyChangeSupport support;

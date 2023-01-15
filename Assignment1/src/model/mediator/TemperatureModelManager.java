@@ -15,7 +15,6 @@ public class TemperatureModelManager implements TemperatureModel
   private ExternalTemperature externalTemperature;
   private PropertyChangeSupport support;
 
-
   public TemperatureModelManager()
   {
     temperatureList = new TemperatureList();
@@ -67,7 +66,8 @@ public class TemperatureModelManager implements TemperatureModel
   public void radiator()
   {
     int currentPosition = radiator.getCurrentState().getPower();
-    support.firePropertyChange("powerPosition",null, currentPosition );
+    support.firePropertyChange("powerPosition",
+        null, currentPosition );
   }
 
 
@@ -113,28 +113,12 @@ public class TemperatureModelManager implements TemperatureModel
     else
       support.addPropertyChangeListener(name, listener);
   }
-
-  /**
-   * > Adds a PropertyChangeListener to the listener list
-   *
-   * @param listener The PropertyChangeListener to be added
-   */
   @Override
   public void addPropertyChangeListener(
       PropertyChangeListener listener)
   {
     support.addPropertyChangeListener(listener);
-
   }
-
-  /**
-   * If the name is null or empty, remove the listener from the list of all
-   * listeners. Otherwise, remove the listener from the list of listeners for the
-   * specified property
-   *
-   * @param name The name of the property to listen for.
-   * @param listener The listener to remove.
-   */
   @Override
   public void removePropertyChangeListener(String name,
       PropertyChangeListener listener)
@@ -144,13 +128,6 @@ public class TemperatureModelManager implements TemperatureModel
     else
       support.removePropertyChangeListener(name, listener);
   }
-
-  /**
-   * Remove a listener from the list of listeners that are notified when a property
-   * changes.
-   *
-   * @param listener The listener to remove.
-   */
   @Override
   public void removePropertyChangeListener(
       PropertyChangeListener listener)

@@ -16,12 +16,10 @@ public class ViewHandler
   private Scene heaterPowerScene;
   private Stage stage;
   private ViewModelFactory viewModelFactory;
-
   public ViewHandler(ViewModelFactory viewModelFactory)
   {
     this.viewModelFactory = viewModelFactory;
   }
-
   public void start()
   {
     stage = new Stage();
@@ -31,7 +29,8 @@ public class ViewHandler
   public void openTemperatureView()
   {
     FXMLLoader loader = new FXMLLoader();
-    loader.setLocation(getClass().getResource("../view/temperature/TemperatureView.fxml"));
+    loader.setLocation(getClass().getResource(
+        "../view/temperature/TemperatureView.fxml"));
     try
     {
       Parent root = loader.load();

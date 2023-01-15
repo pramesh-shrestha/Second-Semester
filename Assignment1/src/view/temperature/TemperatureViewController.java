@@ -18,7 +18,6 @@ public class TemperatureViewController
   private Label warningLabel;
   private TemperatureViewModel temperatureViewModel;
   private ViewHandler viewHandler;
-
   //init method
   public void init(TemperatureViewModel temperatureViewModel, ViewHandler viewHandler)
   {

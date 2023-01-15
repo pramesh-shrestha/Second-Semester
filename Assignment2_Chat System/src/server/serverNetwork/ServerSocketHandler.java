@@ -18,11 +18,13 @@ public class ServerSocketHandler implements Runnable
   private ObjectInputStream inFromClient;
   private ObjectOutputStream outToClient;
   private ServerChatModel serverChatModel;
+  private ConnectionPool pool;
 
 
   public ServerSocketHandler(Socket socket, ServerChatModel serverChatModel, ConnectionPool pool)
   {
     this.socket = socket;
+    this.pool = pool;
     this.serverChatModel = serverChatModel;
 
     try
@@ -62,11 +64,9 @@ public class ServerSocketHandler implements Runnable
       }
       else if(request.getType().equals("login"))
       {
-//        pool.addConnections(this);
         User user = (User) request.getArg();
         if(serverChatModel.login(user.getUsername(), user.getPassword()))
         {
-//          serverChatModel.addUserName(user.getUsername());
           outToClient.writeObject(new Request("login", true));
         }
         else {

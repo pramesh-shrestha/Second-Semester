@@ -8,7 +8,6 @@ public class ViewModelFactory
   private ModelFactory modelFactory;
   private TemperatureViewModel temperatureViewModel;
   private HeaterPowerViewModel heaterPowerViewModel;
-
   public ViewModelFactory(ModelFactory modelFactory)
   {
     this.modelFactory = modelFactory;

@@ -8,7 +8,6 @@ import model.indoor.Thermometer;
 
 public class TemperatureApp extends Application
 {
-
   @Override public void start(Stage stage) throws Exception
   {
     ModelFactory mf = new ModelFactory();

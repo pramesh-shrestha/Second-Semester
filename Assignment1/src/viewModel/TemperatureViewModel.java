@@ -13,8 +13,6 @@ public class TemperatureViewModel
   private StringProperty thermometer2;
   private StringProperty warning;
   private TemperatureModel temperatureModel;
-
-
   public TemperatureViewModel(TemperatureModel temperatureModel)
   {
     this.temperatureModel = temperatureModel;
@@ -22,7 +20,8 @@ public class TemperatureViewModel
     thermometer1 = new SimpleStringProperty();
     thermometer2 = new SimpleStringProperty();
     warning = new SimpleStringProperty();
-    temperatureModel.addPropertyChangeListener("added", evt ->tempUpdate());
+    temperatureModel.addPropertyChangeListener(
+        "added", evt ->tempUpdate());
   }
 
   public void getLastTemp()

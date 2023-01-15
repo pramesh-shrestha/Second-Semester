@@ -13,7 +13,7 @@ public class Accountant implements Runnable{
   public void run() {
     while(true){
       treasureRoomDoor.acquireRead();
-      int totalValue = treasureRoomDoor.look();
+      int totalValue = treasureRoomDoor.look("accountant");
       SingletonLog.getInstance().addLog("The total value of the treasure room is " + totalValue);
       treasureRoomDoor.releaseRead();
       try {

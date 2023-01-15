@@ -13,49 +13,58 @@ public class TreasureRoomGuardsman implements TreasureRoomDoor{
   }
 
   @Override
-  public void add(ArrayList<MultitonValuables> valuables) {
-    treasureRoom.add(valuables);
+  public synchronized void add(ArrayList<MultitonValuables> valuables, String userType) {
+    if(userType.equals("transporter") || userType.equals("king"))
+      treasureRoom.add(valuables, userType);
+
+    else {
+      SingletonLog.getInstance().addLog(Thread.currentThread().getName()
+          + " Guardsman did not allow the access");
+    }
   }
   @Override
-  public MultitonValuables retrieve(int choice) {
-    return treasureRoom.retrieve(choice);
+  public synchronized MultitonValuables retrieve(int choice, String userType) {
+    if(userType.equals("king"))
+      return treasureRoom.retrieve(choice, userType);
+    else {
+      SingletonLog.getInstance().addLog(Thread.currentThread().getName()
+          + " Guardsman did not allow the access");
+    }
+    return null;
   }
   @Override
-  public int look() {
-    return treasureRoom.look();
+  public synchronized int look(String userType) {
+    if(userType.equals("accountant"))
+      return treasureRoom.look(userType);
+    else {
+      SingletonLog.getInstance().addLog(Thread.currentThread().getName()
+          + " Guardsman did not allow the access");
+    }
+    return 0;
   }
   @Override
-  public int getTotalValuablesCount() {
+  public synchronized int getTotalValuablesCount() {
     return treasureRoom.getTotalValuablesCount();
   }
 
   @Override
-  public void acquireRead() {
+  public synchronized void acquireRead() {
     treasureRoom.acquireRead();
   }
 
   @Override
-  public void releaseRead() {
+  public synchronized void releaseRead() {
     treasureRoom.releaseRead();
   }
 
   @Override
-  public void acquireTransporterAccess() {
-    treasureRoom.acquireTransporterAccess();
+  public synchronized void acquireWrite() {
+    treasureRoom.acquireWrite();
   }
 
   @Override
-  public void releaseTransporterAccess() {
-    treasureRoom.releaseTransporterAccess();
+  public synchronized void releaseWrite() {
+    treasureRoom.releaseWrite();
   }
 
-  @Override
-  public void acquireKingAccess() {
-    treasureRoom.acquireKingAccess();
-  }
-
-  @Override
-  public void releaseKingAccess() {
-    treasureRoom.releaseKingAccess();
-  }
 }

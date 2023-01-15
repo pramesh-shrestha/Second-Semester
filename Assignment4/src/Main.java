@@ -6,7 +6,7 @@ import readers_writers_proxy.*;
 
 public class Main {
   public static void main(String[] args) {
-    DepositValuables valuables = new Deposit(10);
+    DepositValuables valuables = new Deposit(50);
     TreasureRoomDoor treasureRoomDoor = new TreasureRoomGuardsman(new TreasureRoom());
     Miner miner1 = new Miner(valuables);
     Miner miner2 = new Miner(valuables);
@@ -16,7 +16,7 @@ public class Main {
     ValuableTransporter transporter3 = new ValuableTransporter(valuables,150,treasureRoomDoor);
     King king = new King(treasureRoomDoor);
     Accountant accountant = new Accountant(treasureRoomDoor);
-    Accountant accountant1 = new Accountant(treasureRoomDoor);
+
 
     Thread thread1 = new Thread(miner1);
     thread1.setName("Miner1");
@@ -34,8 +34,7 @@ public class Main {
     thread7.setName("Transporter2");
     Thread thread8 = new Thread(transporter3);
     thread8.setName("Transporter3");
-    Thread thread9 = new Thread(accountant1);
-    thread9.setName("accountant1");
+
 
     thread1.start();
     thread2.start();
@@ -45,7 +44,7 @@ public class Main {
     thread6.start();
     thread7.start();
     thread8.start();
-    thread9.start();
+
 
   }
 }

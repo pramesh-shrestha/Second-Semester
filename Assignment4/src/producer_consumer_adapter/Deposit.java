@@ -17,7 +17,9 @@ public class Deposit<T> implements DepositValuables<T> {
   public synchronized void add(T element) {
     while(list.size() >= capacity){
       try {
-        SingletonLog.getInstance().addLog(Thread.currentThread().getName() + " is waiting.");
+        SingletonLog.getInstance().addLog(
+            Thread.currentThread().getName() +
+                " is waiting.");
         wait();
       }
       catch (InterruptedException e) {
@@ -32,7 +34,9 @@ public class Deposit<T> implements DepositValuables<T> {
   public synchronized T take() {
     while(list.isEmpty()){
       try {
-        SingletonLog.getInstance().addLog(Thread.currentThread().getName() + " is waiting");
+        SingletonLog.getInstance().addLog(
+            Thread.currentThread().getName() +
+                " is waiting");
         wait();
       }
       catch (InterruptedException e) {

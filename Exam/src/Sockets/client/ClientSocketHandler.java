@@ -1,4 +1,4 @@
-package simpleChat.client;
+package Sockets.client;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

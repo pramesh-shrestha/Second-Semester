@@ -19,7 +19,7 @@ public class ChatClient
       ObjectOutputStream outToServer = new ObjectOutputStream(socket.getOutputStream());
       inFromServer = new ObjectInputStream(socket.getInputStream());
 
-      Thread thread = new Thread(() -> listenToServer());//It basically says,run listenToServer() method in a different thread
+      Thread thread = new Thread(this::listenToServer);//It basically says,run listenToServer() method in a different thread
       thread.setDaemon(true); //It means if it is the last thread running, it will terminate by itself
       thread.start();
 

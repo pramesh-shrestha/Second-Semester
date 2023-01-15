@@ -21,7 +21,9 @@ public class BlockingQueue<T> implements Buffer<T>
       try
       {
         System.out.println("Buffer is full. Carrot peeler is waiting");
+        count = 1;
         wait();
+        count = 1;
       }
       catch (InterruptedException e)
       {
@@ -34,8 +36,9 @@ public class BlockingQueue<T> implements Buffer<T>
     if(queue.isFull())
     {
       count = 1;
-      notifyAll();
+//      notifyAll();
     }
+    notifyAll();
   }
 
   @Override
@@ -46,7 +49,9 @@ public class BlockingQueue<T> implements Buffer<T>
       try
       {
         System.out.println("Buffer is empty. Carrot eaters are waiting.");
+        count = 1;
         wait();
+        count = 1;
       }
       catch (InterruptedException e)
       {
@@ -59,8 +64,9 @@ public class BlockingQueue<T> implements Buffer<T>
     if(queue.isEmpty())
     {
       count = 1;
-      notifyAll();
+//      notifyAll();
     }
+    notifyAll();
     return dequeue;
   }
 
