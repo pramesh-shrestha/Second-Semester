@@ -7,16 +7,13 @@ import java.util.List;
 public class Compressor
 {
   private CompressionMethod method;
-
   public Compressor(CompressionMethod method)
   {
     this.method = method;
   }
-
   public void setMethod(CompressionMethod method) {
     this.method = method;
   }
-
   public void compress(List<String> files)
   {
     System.out.println("It is compressing the file");

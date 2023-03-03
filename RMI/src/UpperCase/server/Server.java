@@ -18,7 +18,7 @@ public class Server implements IUppercaseServer
   {
     try
     {
-      Thread.sleep(10000);
+      Thread.sleep(10);
       return str.toUpperCase();
     }
     catch (InterruptedException e)

@@ -11,9 +11,8 @@ public class ValuableTransporter implements Runnable{
   private int targetWorth;
   int totalWorth = 0;
   private TreasureRoomDoor treasureRoomDoor;
-
-
-  public ValuableTransporter(DepositValuables<MultitonValuables> depositValuables, int targetWorth, TreasureRoomDoor treasureRoomDoor) {
+  public ValuableTransporter(DepositValuables<MultitonValuables> depositValuables,
+      int targetWorth, TreasureRoomDoor treasureRoomDoor) {
     this.depositValuables = depositValuables;
     this.targetWorth = targetWorth;
     this.treasureRoomDoor = treasureRoomDoor;
@@ -34,12 +33,16 @@ public class ValuableTransporter implements Runnable{
     while(true){
       MultitonValuables items = depositValuables.take();
       valuables.add(items);
-      SingletonLog.getInstance().addLog(items.getValueWorth() + " worth of valuables added to the deposit.");
+      SingletonLog.getInstance().addLog(items.getValueWorth() +
+          " worth of valuables added to the deposit.");
       totalWorth += items.getValueWorth();
 
       if(totalWorth >= targetWorth){
-        SingletonLog.getInstance().addLog("Total worth of valuables exceeds the target worth.");
-        SingletonLog.getInstance().addLog(Thread.currentThread().getName() + " is transporting valuables worth " + totalWorth);
+        SingletonLog.getInstance().addLog("Total worth of valuables "
+            + "exceeds the target worth.");
+        SingletonLog.getInstance().addLog(Thread.currentThread()
+            .getName() +
+            " is transporting valuables worth " + totalWorth);
         treasureRoomDoor.acquireWrite();
         treasureRoomDoor.add(valuables, "transporter");
         treasureRoomDoor.releaseWrite();

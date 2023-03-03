@@ -11,26 +11,21 @@ public class  ClientSocketHandler implements Runnable
   private Socket socket;
   private ObjectInputStream inputStream;
   private ObjectOutputStream outputStream;
-  public ClientSocketHandler(Socket socket)
-  {
+  public ClientSocketHandler(Socket socket) {
     this.socket = socket;
-    try
-    {
+    try {
       //starting new thread
       new Thread(() -> listener()).start();
       outputStream = new ObjectOutputStream(socket.getOutputStream());
     }
-    catch (IOException e)
-    {
+    catch (IOException e) {
       throw new RuntimeException(e);
     }
   }
 
   //thread to listen to the server in parallel to main thread
-  private void listener()
-  {
-    try
-    {
+  private void listener() {
+    try {
       inputStream = new ObjectInputStream(socket.getInputStream());
       while (true)
       {
@@ -39,32 +34,25 @@ public class  ClientSocketHandler implements Runnable
         System.out.println(response);
       }
     }
-    catch (IOException | ClassNotFoundException e)
-    {
+    catch (IOException | ClassNotFoundException e) {
       throw new RuntimeException(e);
     }
   }
 
-  @Override public void run()
-  {
-    try
-    {
+  @Override public void run() {
+    try {
       Scanner input = new Scanner(System.in);
-
-      while (true)
-      {
+      while (true) {
         System.out.println("Write new message >");
         String text = input.nextLine();
         outputStream.writeObject(text);
-        if (text.equalsIgnoreCase("exit"))
-        {
+        if (text.equalsIgnoreCase("exit")) {
           socket.close();
           break;
         }
       }
     }
-    catch (IOException e)
-    {
+    catch (IOException e) {
       e.printStackTrace();
     }
   }

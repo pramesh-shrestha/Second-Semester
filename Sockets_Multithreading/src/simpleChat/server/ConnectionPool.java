@@ -6,21 +6,14 @@ import java.util.List;
 public class ConnectionPool
 {
   private List<ServerSocketHandler> connections;
-
-  public ConnectionPool()
-  {
+  public ConnectionPool() {
     connections = new ArrayList<>();
   }
-
-  public void addConnections(ServerSocketHandler ssh)
-  {
+  public void addConnections(ServerSocketHandler ssh) {
     connections.add(ssh);
   }
-
-  public void broadcastMessage(String msg)
-  {
-    for(ServerSocketHandler ssh : connections)
-    {
+  public void broadcastMessage(String msg) {
+    for(ServerSocketHandler ssh : connections) {
       ssh.sendMessage(msg);
     }
   }

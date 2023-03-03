@@ -15,7 +15,8 @@ public class Test
   {
     Compressor compressor = new Compressor(new ZipCompression());
 
-    ArrayList<String> via = new ArrayList<>(Arrays.asList("designPattern.txt","database.txt"));
+    ArrayList<String> via = new ArrayList<>(Arrays.asList
+        ("designPattern.txt","database.txt"));
     compressor.compress(via);
 
     System.out.println("-----------------------------------------");

@@ -5,7 +5,7 @@ import java.beans.PropertyChangeListener;
 
 public class DreamTeamFan implements PropertyChangeListener
 {
-  public DreamTeamFan(SoccerMatch soccerMatch)
+  public DreamTeamFan(PropertyChangeSubject soccerMatch)
   {
     //Adding DreamTeamFan listener to the subject. When a constructor is created in main method, this listener will be added to the subject. 'this'
     //keyword means, an object of DreamTeamFan

@@ -6,14 +6,13 @@ import singleton.SingletonLog;
 import java.util.ArrayList;
 
 public class TreasureRoomGuardsman implements TreasureRoomDoor{
-  //this proxy class should delegate the Real Subject i.e. Treasure Room
   private TreasureRoom treasureRoom;
   public TreasureRoomGuardsman(TreasureRoom treasureRoom) {
     this.treasureRoom = treasureRoom;
   }
-
   @Override
-  public synchronized void add(ArrayList<MultitonValuables> valuables, String userType) {
+  public synchronized void add(ArrayList<MultitonValuables> valuables,
+      String userType) {
     if(userType.equals("transporter") || userType.equals("king"))
       treasureRoom.add(valuables, userType);
 
@@ -23,7 +22,8 @@ public class TreasureRoomGuardsman implements TreasureRoomDoor{
     }
   }
   @Override
-  public synchronized MultitonValuables retrieve(int choice, String userType) {
+  public synchronized MultitonValuables retrieve(int choice,
+      String userType) {
     if(userType.equals("king"))
       return treasureRoom.retrieve(choice, userType);
     else {
@@ -33,7 +33,7 @@ public class TreasureRoomGuardsman implements TreasureRoomDoor{
     return null;
   }
   @Override
-  public synchronized int look(String userType) {
+  public int look(String userType) {
     if(userType.equals("accountant"))
       return treasureRoom.look(userType);
     else {

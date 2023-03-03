@@ -24,7 +24,8 @@ public class TreasureRoom implements TreasureRoomDoor {
   }
 
   @Override
-  public synchronized void add(ArrayList<MultitonValuables> gems, String userType) {
+  public synchronized void add(ArrayList<MultitonValuables> gems,
+      String userType) {
     for (int i = 0; i < gems.size(); i++) {
       if (gems.get(i).equals("Diamond")) {
         diamondCount++;
@@ -82,7 +83,7 @@ public class TreasureRoom implements TreasureRoomDoor {
   }
 
   @Override
-  public synchronized int look(String userType) {
+  public int look(String userType) {
     return getTreasureWorth();
   }
 

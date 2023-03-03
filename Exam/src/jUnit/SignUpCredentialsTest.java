@@ -106,10 +106,15 @@ public class SignUpCredentialsTest
    * The method tests if the user has entered a valid email and all fields are filled out
    */
   @Test
-  public void userEntersEverythingAsExpected() throws CustomException
+  public void userEntersEverythingAsExpected()
   {
     initSignUpCredentials();
-    assertTrue(signUpCredentials.checkSignUp());
+    try {
+      assertTrue(signUpCredentials.checkSignUp());
+    }
+    catch (CustomException e) {
+      fail("This message must not be printed");
+    }
   }
 
   /**
@@ -219,10 +224,15 @@ public class SignUpCredentialsTest
    * The method tests if the password and repeat password matches
    */
   @Test
-  public void testingMatchingPasswordAndRepeatPassword() throws CustomException
+  public void testingMatchingPasswordAndRepeatPassword()
   {
     initSignUpCredentials();
-    assertTrue(signUpCredentials.checkSignUp());
+    try {
+      assertTrue(signUpCredentials.checkSignUp());
+    }
+    catch (CustomException e) {
+      fail("This message must not be printed");
+    }
   }
 
   @Test

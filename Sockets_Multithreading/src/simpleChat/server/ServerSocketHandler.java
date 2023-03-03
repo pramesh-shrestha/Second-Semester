@@ -18,7 +18,6 @@ public class ServerSocketHandler implements Runnable
     this.socket = socket;
     try
     {
-
       objectInputStream = new ObjectInputStream(socket.getInputStream());
       objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
     }

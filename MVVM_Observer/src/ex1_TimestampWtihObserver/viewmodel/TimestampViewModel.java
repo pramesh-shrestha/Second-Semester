@@ -25,8 +25,8 @@ public class TimestampViewModel {
         numberOfUpdates=new SimpleStringProperty("0");
         circle = new SimpleObjectProperty<>();
         counterLabel = new SimpleStringProperty();
-        //Here we don't need to type cast because DataModel now extends the PropertyChangeSubject
-        ((PropertyChangeSubject) model).addPropertyChangeListener("Updated", evt -> propertyChangeUpdateTimestamp());
+
+        model.addPropertyChangeListener("Updated", evt -> propertyChangeUpdateTimestamp());
         model.addPropertyChangeListener("Green", evt -> propertyChangeGreen());
         model.addPropertyChangeListener("Red", evt -> propertyChangeRed());
 

@@ -11,13 +11,14 @@ import java.util.Scanner;
 public class ChatClient
 {
   private ObjectInputStream inFromServer;
+  private Socket socket;
   public void start()
   {
     try
     {
-      Socket socket = new Socket("localhost", 2910);
+      socket = new Socket("localhost", 2910);
       ObjectOutputStream outToServer = new ObjectOutputStream(socket.getOutputStream());
-      inFromServer = new ObjectInputStream(socket.getInputStream());
+
 
       Thread thread = new Thread(this::listenToServer);//It basically says,run listenToServer() method in a different thread
       thread.setDaemon(true); //It means if it is the last thread running, it will terminate by itself
@@ -53,6 +54,7 @@ public class ChatClient
 
     try
     {
+      inFromServer = new ObjectInputStream(socket.getInputStream());
       while (true) //constantly reading from the server
       {
         Message response = (Message) inFromServer.readObject();
